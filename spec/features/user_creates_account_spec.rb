@@ -6,7 +6,7 @@ RSpec.feature "user can create an account" do
     click_on "Sign Up"
     expect(current_path).to eq(new_user_path)
 
-    within(".new-user") do
+    within(".panel-body") do
       fill_in "Username", with: "karinamzalez"
       fill_in "Password", with: "password"
       fill_in "Email", with: "email@example.com"
@@ -24,7 +24,7 @@ RSpec.feature "user can create an account" do
     click_on "Sign Up"
     expect(current_path).to eq(new_user_path)
 
-    within(".new-user") do
+    within(".panel-body") do
       fill_in "Username", with: "apple"
       fill_in "Password", with: "green"
       click_on "Create Account"
