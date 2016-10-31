@@ -8,7 +8,7 @@
     <ul class="nav navbar-nav navbar-right">
       <% if @current_user %>
         <li class="custom-nav"> Logged in as <%= user.username %> </li>
-        <li><%= link_to "Logout", logout_path, method: :delete %></li>
+        <li><%= link_to "Sign Out", logout_path, method: :delete %></li>
       <% end %>
     </ul>
   </div>

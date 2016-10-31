@@ -15,7 +15,7 @@ RSpec.feature "user can create an account" do
 
     expect(current_path).to eq(links_path)
     expect(page).to have_content "Logged in as karinamzalez"
-    expect(page).to have_content "Logout"
+    expect(page).to have_content "Sign Out"
     expect(page).to_not have_content "Login"
   end
 
