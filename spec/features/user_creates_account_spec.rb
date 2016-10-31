@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.feature "user can create an account" do
-  scenario "user is logged out and sees links index page" do
+  scenario "user creates account and sees links index page" do
     visit login_path
     click_on "Create Account"
 
