@@ -20,5 +20,6 @@ RSpec.feature "user successfully creates link" do
       fill_in "Url", with: "http://lab.hakim.se/blob/03/"
       fill_in "Title", with: "DopeBlob"
       click_on "Create Link"
+    end 
   end
 end
