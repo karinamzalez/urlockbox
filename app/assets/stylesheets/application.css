@@ -1,0 +1,66 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+.button-indigo {
+  background-color: #87b7b8;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.button-indigo:hover {
+  background-color: white !important;
+  color: #87b7b8 !important;
+}
+
+.button-gold {
+  display: inline-block;
+  background-color: #eea53c;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.button-gold:hover {
+  background-color: white !important;
+  color: #eea53c !important;
+}
+
+.homepage {
+  background-image: url("https://s-media-cache-ak0.pinimg.com/736x/74/e6/38/74e6385d612117c74eee01fd60b5ce6c.jpg");
+  background-repeat: no-repeat;
+  min-height: 800px;
+  padding-top: 240px;
+  text-align: center;
+  background-position: center;
+  color: white;
+  font-family: 'Open Sans';
+}
+
+.username {
+  font-size: 25px;
+  color: #ae4863;
+}
+
+.email {
+  font-size: 25px;
+  color: #665d74;
+}
+
+.password {
+  font-size: 25px;
+  color: #40718f;
+}
