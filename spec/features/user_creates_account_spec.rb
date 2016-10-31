@@ -27,12 +27,12 @@ RSpec.feature "user can create an account" do
     within(".panel-body") do
       fill_in "Username", with: "apple"
       fill_in "Password", with: "green"
-      click_on "Create Account"
+      click_on "Sign Up"
     end
 
-    expect(page).to have_content "specify an email por favor"
+    expect(current_path).to eq(users_path)
+    expect(page).to have_content "Email can't be blank"
     expect(page).to_not have_content "Logged in as karinamzalez"
-    expect(current_path).to eq(new_session_path)
   end
 
 end

@@ -9,7 +9,8 @@ class UsersController < ApplicationController
       session[:user_id] = @user.id
       redirect_to links_path
     else
-
+      flash.now[:warning] = @user.errors.full_messages.join(", ")
+      render :new
     end
   end
 
