@@ -15,7 +15,6 @@
  */
 
 .button-indigo {
-  /*display: inline-block;*/
   background-color: #87b7b8;
   color: white;
   font-weight: bold;
@@ -49,4 +48,19 @@
   background-position: center;
   color: white;
   font-family: 'Open Sans';
+}
+
+.username {
+  font-size: 25px;
+  color: #ae4863;
+}
+
+.email {
+  font-size: 25px;
+  color: #665d74;
+}
+
+.password {
+  font-size: 25px;
+  color: #40718f;
 }

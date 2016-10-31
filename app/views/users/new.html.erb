@@ -1,0 +1,22 @@
+<div class="homepage">
+  <div class="panel-body col-md-4 col-md-offset-4">
+    <%= form_for @user do |f| %>
+    <div class="form-group username">
+      <%= f.label :username %>
+      <%= f.text_field :username, class: "form-control" %>
+    </div>
+
+    <div class="form-group email">
+      <%= f.label :email %>
+      <%= f.email_field :email, class: "form-control" %>
+    </div>
+
+    <div class="form-group password">
+      <%= f.label :password %>
+      <%= f.password_field :password, class: "form-control" %>
+    </div>
+
+    <%= f.submit "Create Account", class: "btn button-indigo" %>
+    <% end %>
+  </div>
+</div>
