@@ -13,7 +13,7 @@ RSpec.feature "user can create an account" do
       click_on "Sign Up"
     end
 
-    expect(current_path).to eq(links_index_path)
+    expect(current_path).to eq(links_path)
     expect(page).to have_content "Logged in as karinamzalez"
     expect(page).to have_content "Logout"
     expect(page).to_not have_content "Login"
