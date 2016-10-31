@@ -9,7 +9,7 @@ class LinksController < ApplicationController
     @link.user_id = current_user.id
     if @link.save
       flash[:success] = "Successfully created #{@link.title}"
-      render json: @link
+      redirect_to links_path
     else
       flash.now[:warning] = @link.errors.full_messages.join(", ")
       render :new
