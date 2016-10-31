@@ -9,6 +9,7 @@ RSpec.feature "user can successfully sign out" do
     within(".panel-body") do
       fill_in "Username", with: "karinamzalez"
       fill_in "Password", with: "password"
+      fill_in "Password confirmation", with: "password"
       fill_in "Email", with: "email@example.com"
       click_on "Sign Up"
     end
