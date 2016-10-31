@@ -39,6 +39,12 @@
   color: #eea53c !important;
 }
 
+.custom-nav {
+  padding-top: 13px;
+  font-size: 16px;
+  color:  #ae4863;
+}
+
 .homepage {
   background-image: url("https://s-media-cache-ak0.pinimg.com/736x/74/e6/38/74e6385d612117c74eee01fd60b5ce6c.jpg");
   background-repeat: no-repeat;
@@ -53,6 +59,20 @@
 .username {
   font-size: 25px;
   color: #ae4863;
+}
+
+.purple-text {
+  color: #665d74;
+  font-size: 22px;
+  margin-bottom: -38px;
+  margin-top: 10px;
+}
+
+.blue-text {
+  color: #40718f;
+  font-size: 22px;
+  margin-bottom: -38px;
+  margin-top: 10px;
 }
 
 .email {
