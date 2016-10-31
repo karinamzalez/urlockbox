@@ -2,9 +2,9 @@ require 'rails_helper'
 
 RSpec.feature "user can create an account" do
   scenario "user creates account and sees links index page" do
-    visit homepage_path
+    visit root_path
     click_on "Sign Up"
-    expect(current_path).to eq(new_session_path)
+    expect(current_path).to eq(new_user_path)
 
     within(".new-user") do
       fill_in "Username", with: "karinamzalez"
@@ -20,9 +20,9 @@ RSpec.feature "user can create an account" do
   end
 
   scenario "user ommits form field and gets error" do
-    visit homepage_path
+    visit root_path
     click_on "Sign Up"
-    expect(current_path).to eq(new_session_path)
+    expect(current_path).to eq(new_user_path)
 
     within(".new-user") do
       fill_in "Username", with: "apple"
