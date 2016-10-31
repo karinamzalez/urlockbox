@@ -1,5 +1,6 @@
 <%= render partial: 'navbar', locals: {user: @user} %>
 
+<%= link_to "urLinks",  %>
 <div class="circle col-md-offset-4">
   <div class="create-link">
     <%= form_for Link.new do |f| %>
@@ -13,7 +14,7 @@
       <%= f.url_field :url, class: "form-control" %>
     </div>
 
-    <%= f.submit "Create Link", class: "btn button-indigo" %>
+    <%= f.submit "Create Link", class: "btn button-indigo", id: "create-id" %>
     <% end %>
   </div>
 
