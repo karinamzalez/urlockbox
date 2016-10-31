@@ -13,3 +13,25 @@
  *= require_tree .
  *= require_self
  */
+.homepage {
+  background-image: url("https://s-media-cache-ak0.pinimg.com/736x/74/e6/38/74e6385d612117c74eee01fd60b5ce6c.jpg");
+  background-repeat: no-repeat;
+  min-height: 800px;
+  padding-top: 240px;
+  text-align: center;
+  background-position: center;
+  color: white;
+  font-family: 'Open Sans';
+}
+
+/*.sign-in-btn {
+  float: center;
+  height: 64px;
+  font: normal normal 300 1em/4em 'Open Sans';
+  overflow: hidden;
+  width: 300px;
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 8px;
+  -webkit-font-smoothing: antialiased !important;
+}*/
