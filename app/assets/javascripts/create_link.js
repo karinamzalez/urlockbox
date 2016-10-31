@@ -1,22 +1,18 @@
 $(document).ready(function () {
-  createIdea();
+  createLink();
 });
 
-var createIdea = function() {
-  $("#create-id").on("click", function(e) {
+var createLink = function() {
+  $("#create-link").on("click", function(e) {
     var title = $("#title").val();
     var url = $("#url").val();
     $.ajax({
       method: "POST",
-      url: "/api/v1/ideas",
-      data: {idea: {title: title, body: body}},
+      url: "/api/v1/links",
+      data: {idea: {title: title, url: url}},
       dataType: "json",
-      success: function(idea) {
-        appendIdea(idea);
+      success: function(link) {
         clearTextFileds();
-        deleteIdea();
-        upvoteQuality();
-        downvoteQuality();
       }
     });
   });
@@ -24,5 +20,5 @@ var createIdea = function() {
 
 function clearTextFileds() {
   $('#title').val('');
-  $('#body').val('');
+  $('#url').val('');
 }
