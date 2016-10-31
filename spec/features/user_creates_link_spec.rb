@@ -15,5 +15,10 @@ RSpec.feature "user successfully creates link" do
     end
 
     expect(current_path).to eq(links_path)
+
+    within(".create-link") do
+      fill_in "Url", with: "http://lab.hakim.se/blob/03/"
+      fill_in "Title", with: "DopeBlob"
+      click_on "Create Link"
   end
-end 
+end
