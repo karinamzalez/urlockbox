@@ -1,6 +1,6 @@
 <%= render partial: 'navbar', locals: {user: @user} %>
 
-<div class="circle col-md-offset-4">
+<div class="circle col-md-offset-1">
   <div class="create-link">
     <%= form_for Link.new do |f| %>
     <div class="form-group username">
@@ -16,5 +16,26 @@
     <%= f.submit "Create Link", class: "btn button-indigo" %>
     <% end %>
   </div>
+</div>
 
+<div class="title">Ur <a class="title2">Ls</a></div>
+<div class="circle-list col-sm-offset-5">
+  <table>
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Url</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @links.all.each do |link| %>
+        <tr>
+          <td><%= link.title %></td>
+          <td><%= link.url %></td>
+          <td><%= link.read %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 </div>

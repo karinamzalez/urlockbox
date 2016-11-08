@@ -22,6 +22,7 @@ RSpec.feature "user successfully creates link" do
       click_on "Create Link"
     end
 
+    expect(page).to have_content("http://lab.hakim.se/blob/03/")
     expect(page).to have_content("Successfully created DopeBlob")
   end
 end
