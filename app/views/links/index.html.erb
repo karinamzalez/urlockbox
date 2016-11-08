@@ -23,14 +23,19 @@
   <table>
     <thead>
       <tr>
+        <th></th>
         <th>Title</th>
         <th>Url</th>
-        <th>Status</th>
+        <th>Read</th>
+        <th></th>
       </tr>
     </thead>
     <tbody>
       <% @links.all.each do |link| %>
         <tr>
+          <td>
+            <button class="read btn button-indigo btn-xs" data-id=" <%= link.id %> ">Mark As Read</button>
+          </td>
           <td><%= link.title %></td>
           <td><%= link.url %></td>
           <td><%= render_status(link.read) %></td>

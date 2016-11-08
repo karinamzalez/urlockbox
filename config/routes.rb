@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
   root "homepage#show"
 
+  namespace :api do
+    namespace :v1, defaults {format: :json} do
+      
+    end
+  end
+
   resources :users, only: [:new, :create]
   resources :links, only: [:index, :create]
 
