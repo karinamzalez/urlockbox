@@ -1,4 +1,4 @@
-class Api::V1:LinksController < ApplicationController
+class Api::V1::LinksController < ApplicationController
 
   def create
     @link = Link.new(link_params)

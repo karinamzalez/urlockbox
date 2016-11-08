@@ -9,7 +9,7 @@ var createLink = function() {
     $.ajax({
       method: "POST",
       url: "/api/v1/links",
-      data: {idea: {title: title, url: url}},
+      data: {link: {title: title, url: url}},
       dataType: "json",
       success: function(link) {
         clearTextFileds();
