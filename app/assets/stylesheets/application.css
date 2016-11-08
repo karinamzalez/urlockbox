@@ -146,7 +146,7 @@ table {
 
 td {
   border-top: solid white 2px;
-  text-align: left;
+  text-align: center !important;
 }
 
 td:first-child {
@@ -154,5 +154,5 @@ td:first-child {
 }
 
 th {
-  text-align: center;
+  text-align: center !important;
 }
