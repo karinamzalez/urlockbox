@@ -1,6 +1,6 @@
 $(document).ready(function(){
   markAsRead();
-  markAsUnread();
+  // markAsUnread();
 });
 
 var markAsRead = function() {
@@ -9,10 +9,11 @@ var markAsRead = function() {
     var id     = button.getAttribute('data-id');
     $.ajax({
       method: "PATCH",
-      url: "/api/vi/links/mark-as-read/" + id,
+      url: "/api/vi/links/mark-as-read",
+      data: {id: id},
       dataType: "json",
       success: function(idea) {
-        
+
       }
     });
   });
