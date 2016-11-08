@@ -33,7 +33,7 @@
         <tr>
           <td><%= link.title %></td>
           <td><%= link.url %></td>
-          <td><%= link.read %></td>
+          <td><%= render_status(link.read) %></td>
         </tr>
       <% end %>
     </tbody>
