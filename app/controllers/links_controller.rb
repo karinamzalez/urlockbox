@@ -22,11 +22,10 @@ class LinksController < ApplicationController
   end
 
   def update
-    byebug
     link = Link.find(params[:id])
-    if link.update(family_params)
+    if link.update(link_params)
       flash[:success] = "Your updates have been saved"
-      redirect_to admin_dashboard_path
+      redirect_to links_path
     else
       flash.now[:warning] = @link.errors.full_messages.join(", ")
       render :edit
