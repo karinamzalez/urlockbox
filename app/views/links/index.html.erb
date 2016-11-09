@@ -34,7 +34,7 @@
       <% @links.all.each do |link| %>
         <tr class="tr_<%= link.id %>" id="<%= check_status(link.read) %>">
           <td>
-            <button class="read btn button-indigo btn-xs" id="btn_<%= link.id %>"data-id="<%= link.id %>">Mark As Read</button>
+            <button class="read btn button-indigo btn-xs" id="btn_<%= link.id %>"data-id="<%= link.id %>"> <%= button(link) %> </button>
           </td>
           <td><%= link.title %></td>
           <td><%= truncate_link(link.url) %></td>

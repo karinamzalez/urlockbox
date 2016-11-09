@@ -10,4 +10,12 @@ module ApplicationHelper
   def check_status(status)
     status == "t" ? "read" : "unread"
   end
+
+  def button(link)
+    if link.read == "t"
+      "Mark As Unread"
+    else
+      "Mark As Read"
+    end
+  end
 end
