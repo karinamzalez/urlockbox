@@ -168,7 +168,7 @@ th {
   text-align: center !important;
 }
 
-#unread {
+#read {
   text-decoration: line-through;
 }
 

@@ -41,8 +41,8 @@ var updateButton = function(link) {
 
 var lineThrough = function(link) {
   if (link.read === "f") {
-    $(`.tr_${link.id}`).css({"text-decoration": "line-through"});
-  } else {
     $(`.tr_${link.id}`).css({"text-decoration": "initial"});
+  } else {
+    $(`.tr_${link.id}`).css({"text-decoration": "line-through"});
   }
 };
