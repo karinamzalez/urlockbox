@@ -20,6 +20,7 @@
 
 <div class="title">Ur <a class="title2">Ls</a></div>
 <div class="circle-list col-sm-offset-5">
+  <%= button_to "Read", '/api/v1/read-links', method: :get, class: "btn btn-xs read1"%>
   <table>
     <thead>
       <tr>
@@ -31,19 +32,23 @@
       </tr>
     </thead>
     <tbody>
-      <% @links.all.each do |link| %>
-        <tr class="tr_<%= link.id %>" id="<%= check_status(link.read) %>">
-          <td>
-            <button class="read btn button-indigo btn-xs" id="btn_<%= link.id %>"data-id="<%= link.id %>"> <%= button(link) %> </button>
-          </td>
-          <td><%= link.title %></td>
-          <td><%= truncate_link(link.url) %></td>
-          <td class="read_<%= link.id %>"><%= render_status(link.read) %></td>
-          <td>
-            <%= button_to "Edit", edit_link_path(link), method: :get, class: "btn button-gold btn-xs" %>
-          </td>
-        </tr>
-      <% end %>
+      <div class="links">
+        <% @links.each do |link| %>
+        <div class="link_<%= link.id %>" data-title="<%= link.title %>">
+          <tr class="tr_<%= link.id %>" id="<%= check_status(link.read) %>">
+            <td>
+              <button class="read btn button-indigo btn-xs" id="btn_<%= link.id %>"data-id="<%= link.id %>"> <%= button(link) %> </button>
+            </td>
+            <td><%= link.title %></td>
+            <td><%= truncate_link(link.url) %></td>
+            <td class="read_<%= link.id %>"><%= render_status(link.read) %></td>
+            <td>
+              <%= button_to "Edit", edit_link_path(link), method: :get, class: "btn button-gold btn-xs" %>
+            </td>
+          </tr>
+        </div>
+        <% end %>
+      </div>
     </tbody>
   </table>
 </div>

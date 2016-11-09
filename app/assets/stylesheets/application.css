@@ -78,6 +78,12 @@
   color: #665d74;
 }
 
+.filter {
+  color: grey;
+  margin-top: 15px;
+  margin-bottom: -35px;
+}
+
 .homepage {
   background-image: url("https://s-media-cache-ak0.pinimg.com/736x/74/e6/38/74e6385d612117c74eee01fd60b5ce6c.jpg");
   background-repeat: no-repeat;
@@ -120,7 +126,7 @@ table {
   background-color: transparent;
   color: white;
   width: 400px;
-  margin-left: -30px !important;
+  margin-left: -40px !important;
   min-height: 400px;
   font-size: 25px;
   font-family: Sans-serif;
@@ -165,6 +171,13 @@ th {
 
 #read {
   text-decoration: line-through;
+}
+
+.read1 {
+  margin-top: -60px;
+  margin-bottom: 20px;
+  background-color: #665d74 !important;
+  color: white;
 }
 
 .username {

@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1, defaults: {format: :json} do
       patch "/links/mark-as-read", to: "links#update"
+      get   "/links/read-links", to: "links#index"
     end
   end
 
