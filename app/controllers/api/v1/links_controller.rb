@@ -1,5 +1,7 @@
 class Api::V1::LinksController < ApplicationController
   def update
-    byebug
+    @link = Link.find(params[:id])
+    @link.change_read_status
+    render json: @link
   end
 end

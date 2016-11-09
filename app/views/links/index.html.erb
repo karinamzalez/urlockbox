@@ -34,11 +34,11 @@
       <% @links.all.each do |link| %>
         <tr>
           <td>
-            <button class="read btn button-indigo btn-xs" data-id=" <%= link.id %> ">Mark As Read</button>
+            <button class="read btn button-indigo btn-xs" id="btn_<%= link.id %>"data-id="<%= link.id %>">Mark As Read</button>
           </td>
           <td><%= link.title %></td>
           <td><%= link.url %></td>
-          <td><%= render_status(link.read) %></td>
+          <td class="read_<%= link.id %>"><%= render_status(link.read) %></td>
         </tr>
       <% end %>
     </tbody>

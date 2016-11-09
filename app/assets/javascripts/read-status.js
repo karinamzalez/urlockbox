@@ -1,21 +1,39 @@
+/*jshint esversion: 6 */
 $(document).ready(function(){
-  markAsRead();
-  // markAsUnread();
+  toggleRead();
 });
 
-var markAsRead = function() {
+var toggleRead = function() {
   $(".read").on("click", function(e) {
     var button = e.target;
-    console.log(button);
-    var id     = button.getAttribute('data-id');
+    var id = button.getAttribute('data-id');
     $.ajax({
       method: "PATCH",
-      url: "/api/vi/links/mark-as-read",
+      url: "/api/v1/links/mark-as-read",
       data: {id: id},
       dataType: "json",
       success: function(idea) {
-
+        updateHtml(idea);
+        updateButton(idea);
       }
     });
   });
+};
+
+var updateHtml = function(idea) {
+  var readTd = $(`.read_${idea.id}`)[0];
+  if (idea.read === "t") {
+    readTd.innerText = "false";
+  } else {
+    readTd.innerText = "true";
+  }
+};
+
+var updateButton = function(idea) {
+  var readBtn = $(`#btn_${idea.id}`)[0];
+  if (idea.read === "t") {
+    readBtn.innerText = "Mark As Unread";
+  } else {
+    readBtn.innerText = "Mark As Read";
+  }
 };
