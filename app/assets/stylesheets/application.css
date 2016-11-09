@@ -169,7 +169,7 @@ th {
 }
 
 #unread {
-  text-decoration: line-through !important;
+  text-decoration: line-through;
 }
 
 .username {
