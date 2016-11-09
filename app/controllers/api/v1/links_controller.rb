@@ -4,4 +4,9 @@ class Api::V1::LinksController < ApplicationController
     @link.change_read_status
     render json: @link
   end
+
+  def index
+    @links = Link.sort_alphabetically(current_user)
+    render json: @links
+  end
 end

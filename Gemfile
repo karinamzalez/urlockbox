@@ -14,6 +14,7 @@ gem 'rails_12factor', group: :production
 gem "validate_url"
 gem 'sprockets', '>= 3.0.0'
 gem 'sprockets-es6'
+gem 'selenium-webdriver'
 
 group :development, :test do
   gem 'byebug', platform: :mri

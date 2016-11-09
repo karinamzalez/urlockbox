@@ -9,4 +9,9 @@ class Link < ApplicationRecord
       self.update_attribute("read", "f")
     end
   end
+
+  def self.sort_alphabetically(user)
+    where("user_id = #{user.id}")
+    .order("links.title")
+  end
 end
