@@ -17,11 +17,7 @@ var sortAlphabetically = function() {
 };
 
 var removeCurrentLinks = function() {
-  var table = $('tbody')[0];
-  var links = table.children;
-  $.each(links, function (index, link){
-    link.style.display = "none";
-  });
+  $('tbody').empty();
 };
 
 var addSortedLinks = function(links) {
