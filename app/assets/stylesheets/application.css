@@ -58,7 +58,9 @@
 .circle-list {
   background-image: url("https://s-media-cache-ak0.pinimg.com/736x/74/e6/38/74e6385d612117c74eee01fd60b5ce6c.jpg");
   border-radius: 50%;
-  padding: 110px;
+  padding-right: 100px;
+  padding-left: 40px;
+  padding-top: 100px !important;
   width: 600px;
   min-height: 600px;
   overflow: scroll !important;
@@ -87,7 +89,6 @@
 }
 
 h1 {
-  font-size: 40px !important;
   letter-spacing: 10px;
 }
 
@@ -108,9 +109,15 @@ h1 {
   color: #c8d3c8;
 }
 
-.username {
-  font-size: 25px;
-  color: #ae4863;
+.tooltip {
+  display:none;
+  position:absolute;
+  border:1px solid #333;
+  background-color:#161616;
+  border-radius:5px;
+  padding:10px;
+  color:#fff;
+  font-size:12px Arial;
 }
 
 table {
@@ -159,4 +166,9 @@ td:first-child {
 
 th {
   text-align: center !important;
+}
+
+.username {
+  font-size: 25px;
+  color: #ae4863;
 }
