@@ -4,8 +4,9 @@ $(document).ready(function(){
 });
 
 var markAsRead = function() {
-  $(".read").on("read", function(e) {
+  $(".read").on("click", function(e) {
     var button = e.target;
+    console.log(button);
     var id     = button.getAttribute('data-id');
     $.ajax({
       method: "PATCH",

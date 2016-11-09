@@ -88,6 +88,10 @@
   font-family: 'Open Sans';
 }
 
+h1 {
+  letter-spacing: 10px;
+}
+
 .purple-text {
   color: #665d74;
   font-size: 22px;
