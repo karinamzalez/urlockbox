@@ -23,17 +23,22 @@
   <table>
     <thead>
       <tr>
+        <th></th>
         <th>Title</th>
         <th>Url</th>
-        <th>Status</th>
+        <th>Read</th>
+        <th></th>
       </tr>
     </thead>
     <tbody>
       <% @links.all.each do |link| %>
-        <tr>
+        <tr class="tr_<%= link.id %>">
+          <td>
+            <button class="read btn button-indigo btn-xs" id="btn_<%= link.id %>"data-id="<%= link.id %>">Mark As Read</button>
+          </td>
           <td><%= link.title %></td>
           <td><%= link.url %></td>
-          <td><%= link.read %></td>
+          <td class="read_<%= link.id %>"><%= render_status(link.read) %></td>
         </tr>
       <% end %>
     </tbody>
