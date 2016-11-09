@@ -20,6 +20,13 @@
   color: white;
 }
 
+.alphabetical {
+  margin-top: -60px;
+  margin-bottom: 20px;
+  background-color: #c8d3c8 !important;
+  color: white;
+}
+
 .blue-text {
   color: #40718f;
   font-size: 22px;
@@ -87,7 +94,7 @@
 .filter {
   color: grey;
   margin-top: 15px;
-  margin-bottom: -35px;
+  margin-bottom: -45px;
 }
 
 .homepage {

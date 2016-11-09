@@ -5,12 +5,13 @@ $(document).ready(function () {
 var filterTitle = function() {
   $('#link_filter_title').on("keyup", function(){
     var currentTitle = this.value;
-    $links = $('.link');
-    $links.each(function (index, link){
-      if ($link.data('title').indexOf(currentTitle) !== -1 ) {
-        $link.show();
+    var table = $('tbody')[0];
+    var links = table.children;
+    $.each(links, function (index, link){
+      if (link.getAttribute('data-title').indexOf(currentTitle) !== -1 ) {
+        link.style.display = "initial";
       } else {
-        $link.hide();
+        link.style.display = "none";
       }
     });
   });

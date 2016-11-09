@@ -23,6 +23,7 @@
   <button class="read1 btn btn-xs">Read</button>
   <button class="unread btn btn-xs">Unread</button>
   <button class="all btn btn-xs">View All</button>
+  <button class="alphabetical btn btn-xs">Alphabetical</button>
   <table>
     <thead>
       <tr>
@@ -35,7 +36,7 @@
     </thead>
     <tbody>
       <% @links.each do |link| %>
-        <tr class="tr_<%= link.id %>" id="<%= check_status(link.read) %>">
+        <tr class="tr_<%= link.id %>" id="<%= check_status(link.read) %>" data-title="<%= link.title %>">
           <td>
             <button class="read btn button-indigo btn-xs" id="btn_<%= link.id %>"data-id="<%= link.id %>"> <%= button(link) %> </button>
           </td>
