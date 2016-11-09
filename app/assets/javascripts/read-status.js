@@ -12,28 +12,37 @@ var toggleRead = function() {
       url: "/api/v1/links/mark-as-read",
       data: {id: id},
       dataType: "json",
-      success: function(idea) {
-        updateHtml(idea);
-        updateButton(idea);
+      success: function(link) {
+        updateHtml(link);
+        updateButton(link);
+        lineThrough(link);
       }
     });
   });
 };
 
-var updateHtml = function(idea) {
-  var readTd = $(`.read_${idea.id}`)[0];
-  if (idea.read === "t") {
+var updateHtml = function(link) {
+  var readTd = $(`.read_${link.id}`)[0];
+  if (link.read === "t") {
     readTd.innerText = "true";
   } else {
     readTd.innerText = "false";
   }
 };
 
-var updateButton = function(idea) {
-  var readBtn = $(`#btn_${idea.id}`)[0];
-  if (idea.read === "t") {
+var updateButton = function(link) {
+  var readBtn = $(`#btn_${link.id}`)[0];
+  if (link.read === "t") {
     readBtn.innerText = "Mark As Unread";
   } else {
     readBtn.innerText = "Mark As Read";
+  }
+};
+
+var lineThrough = function(link) {
+  if (link.read === "f") {
+    $(`.tr_${link.id}`).css({"text-decoration": "line-through"});
+  } else {
+    $(`.tr_${link.id}`).css({"text-decoration": "initial"});
   }
 };

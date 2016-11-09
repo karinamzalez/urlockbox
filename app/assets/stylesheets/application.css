@@ -59,7 +59,7 @@
   background-image: url("https://s-media-cache-ak0.pinimg.com/736x/74/e6/38/74e6385d612117c74eee01fd60b5ce6c.jpg");
   border-radius: 50%;
   padding-right: 100px;
-  padding-left: 40px;
+  padding-left: 50px;
   padding-top: 100px !important;
   width: 600px;
   min-height: 600px;
@@ -166,6 +166,10 @@ td:first-child {
 
 th {
   text-align: center !important;
+}
+
+#unread {
+  text-decoration: line-through;
 }
 
 .username {
