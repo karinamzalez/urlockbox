@@ -7,5 +7,6 @@ class Api::V1::LinksController < ApplicationController
 
   def index
     @links = Link.sort_alphabetically(current_user)
+    render json: @links
   end
 end
