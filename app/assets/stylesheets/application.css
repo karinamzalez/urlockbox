@@ -180,6 +180,13 @@ th {
   color: white;
 }
 
+.unread {
+  margin-top: -60px;
+  margin-bottom: 20px;
+  background-color: #ae4863 !important;
+  color: white;
+}
+
 .username {
   font-size: 25px;
   color: #ae4863;
