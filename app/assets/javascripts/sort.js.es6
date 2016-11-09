@@ -11,7 +11,6 @@ var sortAlphabetically = function() {
       success: function(links) {
         removeCurrentLinks();
         addSortedLinks(links);
-        console.log(links);
       }
     });
   });
