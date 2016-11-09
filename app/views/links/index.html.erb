@@ -39,6 +39,9 @@
           <td><%= link.title %></td>
           <td><%= truncate_link(link.url) %></td>
           <td class="read_<%= link.id %>"><%= render_status(link.read) %></td>
+          <td>
+            <%= button_to "Edit", edit_link_path(link), method: :get, class: "btn button-gold btn-xs" %>
+          </td>
         </tr>
       <% end %>
     </tbody>

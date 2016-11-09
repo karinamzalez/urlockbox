@@ -16,6 +16,23 @@ class LinksController < ApplicationController
     end
   end
 
+  def edit
+    @link = Link.find(params[:id])
+    @user = current_user
+  end
+
+  def update
+    byebug
+    link = Link.find(params[:id])
+    if link.update(family_params)
+      flash[:success] = "Your updates have been saved"
+      redirect_to admin_dashboard_path
+    else
+      flash.now[:warning] = @link.errors.full_messages.join(", ")
+      render :edit
+    end
+  end
+
   private
 
     def link_params

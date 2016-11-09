@@ -1,0 +1,19 @@
+<%= render partial: 'navbar', locals: {user: @user} %>
+
+<div class="circle-list col-sm-offset-3 offest">
+  <%= form_for @link do |f| %>
+    <div class="form-group username">
+      <%= f.label :title %>
+      <br>
+      <%= f.text_field :title, class: "form-control" %>
+    </div>
+    <br>
+    <div class="form-group email">
+      <%= f.label :url %>
+      <br>
+      <%= f.text_field :url, class: "form-control" %>
+    </div>
+
+    <%= f.submit "Edit", class: "btn button-gold" %>
+  <% end %>
+<div>
