@@ -23,9 +23,9 @@ var toggleRead = function() {
 var updateHtml = function(idea) {
   var readTd = $(`.read_${idea.id}`)[0];
   if (idea.read === "t") {
-    readTd.innerText = "false";
-  } else {
     readTd.innerText = "true";
+  } else {
+    readTd.innerText = "false";
   }
 };
 

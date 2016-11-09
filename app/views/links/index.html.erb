@@ -32,7 +32,7 @@
     </thead>
     <tbody>
       <% @links.all.each do |link| %>
-        <tr>
+        <tr class="tr_<%= link.id %>">
           <td>
             <button class="read btn button-indigo btn-xs" id="btn_<%= link.id %>"data-id="<%= link.id %>">Mark As Read</button>
           </td>
