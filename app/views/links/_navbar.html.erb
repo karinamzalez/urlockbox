@@ -5,9 +5,13 @@
         <li class="purple-text">Ur</li><li class= "blue-text"> Lockbox</li>
       <ul>
     </div>
-    <div class="filter col-sm-offset-7">
+    <div class="filter col-sm-offset-4">
       <label>Filter By Title: </label>
       <%= text_field :link, :filter_title %>
+    </div>
+    <div class="filter col-sm-offset-7">
+      <label>Filter By Url: </label>
+      <%= text_field :link, :filter_url %>
     </div>
     <ul class="nav navbar-nav navbar-right">
       <% if @current_user %>
