@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.feature "user successfully toggles read status" do
+RSpec.feature "user successfully toggles read status", js: true do
   scenario "read url can be marked as unread" do
     visit root_path
     click_on "Sign Up"
@@ -27,6 +27,6 @@ RSpec.feature "user successfully toggles read status" do
 
     click_on "Mark As Read"
 
-    expect(Link.last.read).to eq('f')
+    expect(Link.last.read).to eq('t')
   end
 end
